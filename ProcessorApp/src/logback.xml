@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<!-- <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) 
+				%logger{36}.%M - %msg%n</pattern> -->
+
+			<pattern>[%d{yyyyMMddHH:mm:ss.SSS}][%-5p][%t][%X{requestId}][%c{1}:%L]
+				%m%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<File>${LOG_FILE}</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>${LOG_FILE}.%i.logh
+			</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>20</maxIndex>
+		</rollingPolicy>
+
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizedBasedTriggeringPolicy">
+			<maxFileSize>20MB</maxFileSize>
+		</triggeringPolicy>
+		<encoder>
+			<!-- <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) 
+				%logger{36}.%M - %msg%n</pattern> -->
+
+			<pattern>[%d{yyyyMMddHH:mm:ss.SSS}][%-5p][%t][%X{requestId}][%c{1}:%L]
+				%m%n</pattern>
+		</encoder>
+	</appender>
+
+
+	<root level="info">
+		<appender-ref ref="FILE" />
+	</root>
+
+</configuration>
