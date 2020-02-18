@@ -19,11 +19,14 @@ public class MesssageProducer extends Thread {
 	private BlockingQueue<FinalResultSetABCD> commonQueue;
 
 	List<FinalResultSetABCD> allSourceMsgList;
+	
+	BlockingQueue<FinalResultSetABCD> commonErrorQueue;
 
-	public MesssageProducer(BlockingQueue<FinalResultSetABCD> commonQueue, List<FinalResultSetABCD> allSourceMsgList) {
+	public MesssageProducer(BlockingQueue<FinalResultSetABCD> commonQueue, BlockingQueue<FinalResultSetABCD> commonErrorQueue , List<FinalResultSetABCD> allSourceMsgList) {
 		super();
 		this.commonQueue = commonQueue;
 		this.allSourceMsgList = allSourceMsgList;
+		this.commonErrorQueue = commonErrorQueue;
 	}
 
 	@Override
@@ -38,6 +41,11 @@ public class MesssageProducer extends Thread {
 						LOGGER.debug("Message added in common Queue.");
 					} catch (InterruptedException e) {
 						LOGGER.error("Error while putting the message in commonQueue and exception is {}",e.getMessage());
+						try {
+							commonErrorQueue.put(task);
+						} catch (InterruptedException e1) {
+							e1.printStackTrace();
+						}
 					}
 				});
 	}

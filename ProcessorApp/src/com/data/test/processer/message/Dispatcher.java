@@ -19,15 +19,15 @@ public class Dispatcher implements Runnable {
 
 	private BlockingQueue<FinalResultSetABCD> commonMsgQueue;
 	private BlockingQueue<FinalResultSetABCD> sourceABMsgQueue;
-	private BlockingQueue<FinalResultSetABCD> sourceCDMshQueue;
+	private BlockingQueue<FinalResultSetABCD> sourceCDMsgQueue;
 	private int totalPublishMsgTask;
 
 	public Dispatcher(BlockingQueue<FinalResultSetABCD> commonMsgQueue, int totalPublishMsgTask,
-			BlockingQueue<FinalResultSetABCD> sourceABMsgQueue, BlockingQueue<FinalResultSetABCD> sourceCDMshQueue) {
+			BlockingQueue<FinalResultSetABCD> sourceABMsgQueue, BlockingQueue<FinalResultSetABCD> sourceCDMsgQueue) {
 		this.commonMsgQueue = commonMsgQueue;
 		this.totalPublishMsgTask = totalPublishMsgTask;
 		this.sourceABMsgQueue = sourceABMsgQueue;
-		this.sourceCDMshQueue = sourceCDMshQueue;
+		this.sourceCDMsgQueue = sourceCDMsgQueue;
 	}
 
 	@Override
@@ -35,13 +35,15 @@ public class Dispatcher implements Runnable {
 		for (int i = 0; i < totalPublishMsgTask; i++) {
 			try {
 				FinalResultSetABCD task = commonMsgQueue.poll(1, TimeUnit.MINUTES);
-				if (task.getSource().contains(MessageProcessorConstants.AB_MESSAGE_SOURCE)) {
-					sourceABMsgQueue.put(task);
-				} else if (task.getSource().contains(MessageProcessorConstants.CD_MESSAGE_SOURCE)) {
-					sourceCDMshQueue.put(task);
-				} else {
-					LOGGER.error("Unknown source identified");
-					throw new InvalidSourceException("Message source did not recognized");
+				if (task != null) {
+					if (task.getSource().contains(MessageProcessorConstants.AB_MESSAGE_SOURCE)) {
+						sourceABMsgQueue.put(task);
+					} else if (task.getSource().contains(MessageProcessorConstants.CD_MESSAGE_SOURCE)) {
+						sourceCDMsgQueue.put(task);
+					} else {
+						LOGGER.error("Unknown source identified");
+						throw new InvalidSourceException("Message source did not recognized");
+					}
 				}
 			} catch (InterruptedException e) {
 				LOGGER.error("Error while putting the message in source queue is {}", e.getMessage());
