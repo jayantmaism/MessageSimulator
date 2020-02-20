@@ -1,0 +1,172 @@
+[2020021810:31:18.762][ERROR][main][][c.d.t.p.m.MesssageProducer:40]
+				Error while putting the message in commonQueue and exception is null
+[2020021810:32:19.875][ERROR][main][][c.d.t.p.m.MesssageProducer:40]
+				Error while putting the message in commonQueue and exception is null
+[2020021810:35:06.297][ERROR][main][][c.d.t.p.m.MesssageProducer:40]
+				Error while putting the message in commonQueue and exception is null
+[2020021810:35:32.667][ERROR][main][][c.d.t.p.m.MesssageProducer:40]
+				Error while putting the message in commonQueue and exception is null
+[2020021810:38:18.825][ERROR][main][][c.d.t.p.m.MesssageProducer:40]
+				Error while putting the message in commonQueue and exception is null
+[2020021810:47:40.007][ERROR][main][][c.d.t.p.m.MesssageProducer:43]
+				Error while putting the message in commonQueue and exception is null
+[2020021810:47:48.816][INFO ][pool-1-thread-2][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.819][INFO ][pool-1-thread-2][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.819][INFO ][pool-1-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.820][INFO ][pool-1-thread-2][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.820][INFO ][pool-1-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.821][INFO ][pool-1-thread-2][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.821][INFO ][pool-1-thread-2][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.821][INFO ][pool-1-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.821][INFO ][pool-1-thread-2][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.822][INFO ][pool-1-thread-2][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.822][INFO ][pool-1-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.822][INFO ][pool-1-thread-2][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.823][INFO ][pool-1-thread-2][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.823][INFO ][pool-1-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.823][INFO ][pool-1-thread-2][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.823][INFO ][pool-1-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.824][INFO ][pool-1-thread-2][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.824][INFO ][pool-1-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.826][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.829][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.829][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.830][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.831][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.831][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.831][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.832][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.833][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.833][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.834][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.835][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.836][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.836][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.836][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.837][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.837][INFO ][pool-2-thread-3][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.838][INFO ][pool-2-thread-4][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.841][INFO ][pool-2-thread-1][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.842][INFO ][pool-1-thread-1][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.843][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: D1 Processed 
+[2020021810:47:48.844][INFO ][pool-1-thread-4][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.844][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: A1 Processed 
+[2020021810:47:48.845][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: A2 Processed 
+[2020021810:47:48.846][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: A3 Processed 
+[2020021810:47:48.847][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: A4 Processed 
+[2020021810:47:48.848][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: A5 Processed 
+[2020021810:47:48.848][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: A6 Processed 
+[2020021810:47:48.849][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: A7 Processed 
+[2020021810:47:48.849][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: A8 Processed 
+[2020021810:47:48.850][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: A9 Processed 
+[2020021810:47:48.850][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: A10 Processed 
+[2020021810:47:48.851][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: B1 Processed 
+[2020021810:47:48.851][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: B2 Processed 
+[2020021810:47:48.845][INFO ][pool-2-thread-2][][c.d.t.p.m.ConsumerTask:51]
+				Message received from source AB or source CD
+[2020021810:47:48.852][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: B3 Processed 
+[2020021810:47:48.852][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: B4 Processed 
+[2020021810:47:48.853][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: B5 Processed 
+[2020021810:47:48.854][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: B6 Processed 
+[2020021810:47:48.855][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: B7 Processed 
+[2020021810:47:48.855][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: B8 Processed 
+[2020021810:47:48.856][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: B9 Processed 
+[2020021810:47:48.856][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: B10 Processed 
+[2020021810:47:48.857][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: D2 Processed 
+[2020021810:47:48.858][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: D3 Processed 
+[2020021810:47:48.858][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: D4 Processed 
+[2020021810:47:48.859][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: D5 Processed 
+[2020021810:47:48.859][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: D6 Processed 
+[2020021810:47:48.860][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: D7 Processed 
+[2020021810:47:48.861][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: D8 Processed 
+[2020021810:47:48.861][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: D9 Processed 
+[2020021810:47:48.862][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: D10 Processed 
+[2020021810:47:48.867][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: C1 Processed 
+[2020021810:47:48.868][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: C2 Processed 
+[2020021810:47:48.869][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: C3 Processed 
+[2020021810:47:48.870][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: C4 Processed 
+[2020021810:47:48.871][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: C5 Processed 
+[2020021810:47:48.872][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: C6 Processed 
+[2020021810:47:48.874][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: C7 Processed 
+[2020021810:47:48.879][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: C8 Processed 
+[2020021810:47:48.880][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: C9 Processed 
+[2020021810:47:48.881][INFO ][main][][c.d.t.p.MessageProcessor:72]
+				Thread Name ::   main  and processed message :: C10 Processed 
