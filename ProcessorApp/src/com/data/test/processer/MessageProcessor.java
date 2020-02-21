@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.data.test.processer.common.MessageProcessorConstants;
+import com.data.test.processer.common.MessageProcessorUtility;
 import com.data.test.processer.dto.FinalResultSetABCD;
 import com.data.test.processer.dto.SourceABImpl;
 import com.data.test.processer.dto.SourceCDImpl;
@@ -28,7 +29,18 @@ public class MessageProcessor {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(MessageProcessor.class);
 
-	public void startMessageSimulator(int totalMessageCount, int totalThreadsForProcessing) throws Exception {
+	private BlockingQueue<FinalResultSetABCD> commonQueue;
+	private BlockingQueue<FinalResultSetABCD> abSourceMsgQueue;
+	private BlockingQueue<FinalResultSetABCD> cdSourceMsgQueue;
+	private BlockingQueue<Future<FinalResultSetABCD>> finalResultSetQueue;
+	private BlockingQueue<FinalResultSetABCD> commonErrorQueue;
+	private int totalMessageVolume;
+
+	public void startMessageSimulator(int totalMessageCount) throws Exception {
+		
+		 int countPerSourceMsg = totalMessageCount/2;
+		 totalMessageVolume = totalMessageCount;
+		 int totalThreadsForProcessing = MessageProcessorUtility.getAvailableCores();
 
 		/*
 		 * commonQueue : All sources will put messages in commonQueue
@@ -42,13 +54,10 @@ public class MessageProcessor {
 		 * abConsumerService cdConsumerService : Source CD will submit their
 		 * task to abConsumeService
 		 */
-		BlockingQueue<FinalResultSetABCD> commonQueue = new LinkedBlockingQueue<FinalResultSetABCD>(totalMessageCount);
-		BlockingQueue<FinalResultSetABCD> abSourceMsgQueue = new LinkedBlockingQueue<FinalResultSetABCD>(
-				totalMessageCount / 2);
-		BlockingQueue<FinalResultSetABCD> cdSourceMsgQueue = new LinkedBlockingQueue<FinalResultSetABCD>(
-				totalMessageCount / 2);
-		BlockingQueue<Future<FinalResultSetABCD>> finalResultSetQueue = new LinkedBlockingQueue<Future<FinalResultSetABCD>>(
-				totalMessageCount);
+		commonQueue = new LinkedBlockingQueue<FinalResultSetABCD>(totalMessageCount);
+		abSourceMsgQueue = new LinkedBlockingQueue<FinalResultSetABCD>(countPerSourceMsg);
+		cdSourceMsgQueue = new LinkedBlockingQueue<FinalResultSetABCD>(countPerSourceMsg);
+		finalResultSetQueue = new LinkedBlockingQueue<Future<FinalResultSetABCD>>(totalMessageCount);
 		ExecutorService abConsumerService = Executors.newFixedThreadPool(totalThreadsForProcessing);
 		ExecutorService cdConsumerService = Executors.newFixedThreadPool(totalThreadsForProcessing);
 		ExecutorService executorService = Executors.newFixedThreadPool(2);
@@ -56,15 +65,13 @@ public class MessageProcessor {
 		// commonErrorQueue : All the failed messages while putting in
 		// commonQueue will go in commonErrorQueue
 		// commonErrorQueue Will be processed by error dispatcher
-		BlockingQueue<FinalResultSetABCD> commonErrorQueue = new LinkedBlockingQueue<FinalResultSetABCD>(
-				totalMessageCount);
+		commonErrorQueue = new LinkedBlockingQueue<FinalResultSetABCD>(totalMessageCount);
 		try {
 
 			/*
 			 * Start result set consumer
 			 */
-			startResultSetConsumerTask(totalMessageCount, abSourceMsgQueue, cdSourceMsgQueue, finalResultSetQueue,
-					abConsumerService, cdConsumerService, executorService);
+			startResultSetConsumerTask(abConsumerService, cdConsumerService, executorService);
 
 			/*
 			 * Start Dispatcher thread
@@ -110,7 +117,8 @@ public class MessageProcessor {
 			BlockingQueue<Future<FinalResultSetABCD>> finalResultSetQueue) {
 		for (int i = 0; i < totalMessageCount; i++) {
 			try {
-				String processedValue = finalResultSetQueue.poll(1, TimeUnit.MINUTES).get().getProcessedValue();
+				String processedValue = finalResultSetQueue
+						.poll(MessageProcessorConstants.POLL_FIRST_MSG, TimeUnit.MINUTES).get().getProcessedValue();
 				LOGGER.info("Thread Name ::   {}  and processed message :: {} ", Thread.currentThread().getName(),
 						processedValue);
 			} catch (InterruptedException | ExecutionException e) {
@@ -123,13 +131,11 @@ public class MessageProcessor {
 	/*
 	 * This method will start ResultSet consumer task
 	 */
-	private void startResultSetConsumerTask(int totalMessageCount, BlockingQueue<FinalResultSetABCD> abSourceMsgQueue,
-			BlockingQueue<FinalResultSetABCD> cdSourceMsgQueue,
-			BlockingQueue<Future<FinalResultSetABCD>> finalResultSetQueue, ExecutorService abConsumerService,
-			ExecutorService cdConsumerService, ExecutorService executorService) {
-		startResultSetTask(abSourceMsgQueue, abConsumerService, finalResultSetQueue, totalMessageCount,
+	private void startResultSetConsumerTask(ExecutorService abConsumerService, ExecutorService cdConsumerService,
+			ExecutorService executorService) {
+		startResultSetTask(abSourceMsgQueue, abConsumerService, finalResultSetQueue, totalMessageVolume,
 				executorService);
-		startResultSetTask(cdSourceMsgQueue, cdConsumerService, finalResultSetQueue, totalMessageCount,
+		startResultSetTask(cdSourceMsgQueue, cdConsumerService, finalResultSetQueue, totalMessageVolume,
 				executorService);
 	}
 

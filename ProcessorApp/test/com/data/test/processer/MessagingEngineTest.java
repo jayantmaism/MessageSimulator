@@ -27,11 +27,11 @@ public class MessagingEngineTest {
 
 	@Test
 	public void test1() throws Exception {
-		msgSimulator.startMessageSimulator(40, 4);
+		msgSimulator.startMessageSimulator(40);
 
 		MessageProcessor processor = Mockito.mock(MessageProcessor.class);
-		processor.startMessageSimulator(16, 2);
-		verify(processor, times(1)).startMessageSimulator(16, 2);
+		processor.startMessageSimulator(16);
+		verify(processor, times(1)).startMessageSimulator(16);
 	}
 
 	@Test

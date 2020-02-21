@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.data.test.processer.common.MessageProcessorConstants;
 import com.data.test.processer.dto.FinalResultSetABCD;
 
 public class ConsumerTask implements Runnable {
@@ -43,7 +44,7 @@ public class ConsumerTask implements Runnable {
 	public void run() {
 		for (int i = 0; i < totalTaskByAllProducers/2; i++) {
 			try {
-				FinalResultSetABCD task = commonQueue.poll(1, TimeUnit.MINUTES);
+				FinalResultSetABCD task = commonQueue.poll(MessageProcessorConstants.POLL_FIRST_MSG, TimeUnit.MINUTES);
 				
 				finalResultSetQueue.put(executorService.submit(new Callable<FinalResultSetABCD>() {
 					@Override

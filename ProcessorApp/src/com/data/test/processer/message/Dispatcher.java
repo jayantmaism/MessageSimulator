@@ -34,7 +34,7 @@ public class Dispatcher implements Runnable {
 	public void run() {
 		for (int i = 0; i < totalPublishMsgTask; i++) {
 			try {
-				FinalResultSetABCD task = commonMsgQueue.poll(1, TimeUnit.MINUTES);
+				FinalResultSetABCD task = commonMsgQueue.poll(MessageProcessorConstants.POLL_FIRST_MSG, TimeUnit.MINUTES);
 				if (task != null) {
 					if (task.getSource().contains(MessageProcessorConstants.AB_MESSAGE_SOURCE)) {
 						sourceABMsgQueue.put(task);
