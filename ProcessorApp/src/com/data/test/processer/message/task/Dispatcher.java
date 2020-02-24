@@ -1,4 +1,4 @@
-package com.data.test.processer.message;
+package com.data.test.processer.message.task;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import com.data.test.processer.common.MessageProcessorConstants;
 import com.data.test.processer.customexception.InvalidSourceException;
-import com.data.test.processer.dto.FinalResultSetABCD;
+import com.data.test.processer.message.source.FinalResultSetABCD;
 
 /*
  * Dipatcher will divide the message based on the source and put into respective queue

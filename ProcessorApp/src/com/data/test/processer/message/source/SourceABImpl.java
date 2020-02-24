@@ -1,6 +1,6 @@
-package com.data.test.processer.dto;
+package com.data.test.processer.message.source;
 
-public class SourceCDImpl implements FinalResultSetABCD {
+public class SourceABImpl implements FinalResultSetABCD {
 
 	private final String value;
 	
@@ -8,7 +8,7 @@ public class SourceCDImpl implements FinalResultSetABCD {
 	
 	private String valueAfterProcessing;
 	
-	public SourceCDImpl(String value , String source) {
+	public SourceABImpl(String value , String source) {
 		super();
 		this.value = value;
 		this.source = source;
@@ -32,4 +32,6 @@ public class SourceCDImpl implements FinalResultSetABCD {
 	public String getSource() {
 		return source;
 	}
+	
+	
 }

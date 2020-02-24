@@ -15,12 +15,12 @@ import org.slf4j.LoggerFactory;
 
 import com.data.test.processer.common.MessageProcessorConstants;
 import com.data.test.processer.common.MessageProcessorUtility;
-import com.data.test.processer.dto.FinalResultSetABCD;
-import com.data.test.processer.dto.SourceABImpl;
-import com.data.test.processer.dto.SourceCDImpl;
-import com.data.test.processer.message.ConsumerTask;
-import com.data.test.processer.message.Dispatcher;
-import com.data.test.processer.message.MesssageProducer;
+import com.data.test.processer.message.source.FinalResultSetABCD;
+import com.data.test.processer.message.source.SourceABImpl;
+import com.data.test.processer.message.source.SourceCDImpl;
+import com.data.test.processer.message.task.ConsumerTask;
+import com.data.test.processer.message.task.Dispatcher;
+import com.data.test.processer.message.task.MesssageProducer;
 
 /*
  * MessageProcessor : It will process the data and consume the data then It will produce the resultSet data

@@ -15,9 +15,9 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import com.data.test.processer.common.MessageProcessorConstants;
-import com.data.test.processer.dto.FinalResultSetABCD;
-import com.data.test.processer.dto.SourceABImpl;
-import com.data.test.processer.message.MesssageProducer;
+import com.data.test.processer.message.source.FinalResultSetABCD;
+import com.data.test.processer.message.source.SourceABImpl;
+import com.data.test.processer.message.task.MesssageProducer;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MessagingEngineTest {

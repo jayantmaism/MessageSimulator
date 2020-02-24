@@ -1,4 +1,4 @@
-package com.data.test.processer.dto;
+package com.data.test.processer.message.source;
 
 public interface FinalResultSetABCD {
 

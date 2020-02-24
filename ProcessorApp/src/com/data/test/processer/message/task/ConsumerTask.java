@@ -1,4 +1,4 @@
-package com.data.test.processer.message;
+package com.data.test.processer.message.task;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;
@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.data.test.processer.common.MessageProcessorConstants;
-import com.data.test.processer.dto.FinalResultSetABCD;
+import com.data.test.processer.message.source.FinalResultSetABCD;
 
 public class ConsumerTask implements Runnable {
 	

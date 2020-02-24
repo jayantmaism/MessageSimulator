@@ -1,4 +1,4 @@
-package com.data.test.processer.message;
+package com.data.test.processer.message.task;
 
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
-import com.data.test.processer.dto.FinalResultSetABCD;
+import com.data.test.processer.message.source.FinalResultSetABCD;
 
 /*
  * It will take the messages from the all queues and put in common queues.
